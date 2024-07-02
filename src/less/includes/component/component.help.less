@@ -1,0 +1,266 @@
+#help {
+    
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+
+    .containerHelp{
+        position: relative;
+		background-size: cover;
+		background-position: center;
+		width: 90%;
+		height: 90%;
+        background-color: #000;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.56);
+		overflow: hidden;
+		border-radius: 1em;   
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &::before{
+            position: absolute;
+            content: "";
+            width:100%;
+            height:100%;
+            top: 0;
+            left:0;
+            background-image: url(../assets/img/bg01.png);
+            opacity: 0.3;
+            background-size: cover;
+            background-position: center;
+            z-index:0;
+        }
+
+        .triangulH{
+            position: absolute;
+            width: 45em;
+            height: 50em;
+            background-image: url(../assets/img/trianguloH.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: -13em;
+            left: 0;
+        }
+
+        .blocksH{
+            position: absolute;
+            width:100%;
+            height:100%;
+            top: 0;
+            left:0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4em;
+
+            .blockH{
+                position: relative;
+                height: 80%;
+                border-radius: 1em;
+                overflow: hidden;
+
+                .fundH{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: transparent;
+                    backdrop-filter: blur(18.477100372314453px);
+                    --webkit-backdrop-filter: blur(18.477100372314453px);
+                    background-color: rgba(255, 255, 255, 0.03);
+                    border-radius: 1em;
+                    overflow: hidden;
+
+                }
+                
+
+                &.blockH1{
+                    position: relative;
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:center;
+                    align-items: center;
+                    padding: 1em;
+
+                    .titleH{
+                        position: relative;
+                        font-size: 2em;
+                        font-weight: bold;
+                        color: #2bfed8;
+                    }
+                    .listH{
+                        .itH{
+                            position: relative;
+                            width:100%;
+                            display: flex;
+                            justify-content:center;
+                            align-items: center;
+
+                            img{
+                                position: relative;
+                                width:20%;
+                                padding: 1em;
+                            }
+                            .textH{
+                                position: relative;
+                                width:80%;
+                                color: #fff;
+                                font-weight: 300;
+                                b{
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.blockH2{
+                    position: relative;
+                    width: 39%;
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    padding: 1em;
+
+                    .titleH{
+                        position: relative;
+                        font-size: 0.8em;
+                        font-weight: bold;
+                        color: #ffc455;
+                        margin-bottom: 1em;
+                    }
+                    .listH1,
+                    .listH2
+                    {
+                        position: relative;
+                        width:100%;
+                        display: flex;
+                        flex-direction: center;
+                        justify-content:center;
+                        align-items: center;
+                        
+                        &.listH2{
+                            margin-top: 0.5em;
+                            .itH{
+                                position: relative;
+                                width:30%;
+                            }
+                        }
+
+                        .itH{
+                            position: relative;
+                            width:33%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content:center;
+                            align-items: center;
+                            padding: 0.01em;
+
+                            .textH{
+                                position: relative;
+                                width:100%;
+                                font-size: 0.5em;
+                                text-align: center;
+                                color: #fff;
+                                text-transform: uppercase;
+                            }
+
+                            img{
+                                position: relative;
+                                width:100%;
+                                height: 7em;
+                                padding: 0.5em 0em;
+
+                                &.itemH1{
+                                    filter: grayscale(100%);
+                                    opacity: 0.2;
+                                }
+
+                                // &.itemH1,  &.itemH2,  &.itemH3{
+                                //     filter: drop-shadow( 0.8em 0.8em 0.8em rgba(0,0,0,0.8));
+                                // }
+
+                            }
+
+                            .comeiaItem2{
+                                position: relative;
+                                svg{
+                                    position:absolute;
+                                    top: 0;
+                                    left: 0;
+                                    padding: 0.5em 0em;
+                                    path{
+                                        fill:rgba(193, 28, 249,0.7);
+                                    }
+                                }
+                            }
+
+                            .material{
+                                position: relative;
+                                width:100%;
+                                height: 5em;
+                                display: flex;
+                                justify-content:center;
+                                align-items: center;
+
+                                .hitImg{
+                                    filter: drop-shadow( 0.8em 0.8em 0.8em rgba(0,0,0,0.8));
+                                }
+
+                                &.itemH1{
+                                    filter: grayscale(100%);
+                                    opacity: 0.5;
+                                }
+
+                                &.itemH2{
+                                    .borderM{
+                                        filter: invert(49%) sepia(98%) saturate(830%) hue-rotate(263deg) brightness(102%) contrast(99%);
+                                    }
+                                }
+
+                                &.itemH3{
+                                    .borderM{
+                                        filter: invert(100%) sepia(56%) saturate(1698%) hue-rotate(95deg) brightness(96%) contrast(105%);
+                                    }
+                                }
+
+                                img{
+                                    position:absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: .5em;
+            right: .5em;
+            transition: transform 0.5s;
+            cursor: pointer;
+
+            img{
+                position: relative;
+                width: 1.5em;
+                height: 1.5em;
+                object-fit: contain;
+            }
+            
+            &:hover {
+                transition: transform 0.5s;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container
+        .embed-container.embed-container-frame
+            <iframe src="https://www.youtube.com/embed/CmzKQ3PSrow?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        .close-page(page="10_c1_m3")
+            +image('closeBtn.svg')
+
+block scripts
+    script(src="script.js")

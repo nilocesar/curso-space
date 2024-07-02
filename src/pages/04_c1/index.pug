@@ -1,0 +1,55 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    body(angleBase=15 , comeiaCurrent=1, comeiaAll=6)
+    .container.containerAnima1
+        .bg
+        #particles-js
+        .titulo Conhecendo<br> o Mundo Lorem
+        .comeiaAll.zoomIn.delay3
+            +image('comeiaIcoCentral.svg', "comeiaCenter zoomIn delay4")
+            +image('comeia1_a1.png', "comeiaItem comeiaItem1")
+            +image('comeia1_a2.png', "comeiaItem comeiaItem2")
+            +image('comeia1_a3.png', "comeiaItem comeiaItem3")
+            +image('comeia1_a4.png', "comeiaItem comeiaItem4")
+            +image('comeia1_a5.png', "comeiaItem comeiaItem5")
+            +image('comeia1_a6.png', "comeiaItem comeiaItem6")
+
+            .hit.comeiaItem1(item=1, page="05_c1_m1" )
+                +comeiaHit()
+                .seta
+                    +image('setaComeia.svg', "setaComeia in")
+                    p.up Inovações
+            .hit.comeiaItem2(item=2, page="07_c1_m2" )
+                +comeiaHit()
+                .seta
+                    p.left LMS
+                    +image('setaComeia.svg', "setaComeia in")
+            .hit.comeiaItem3(item=3, page="10_c1_m3" )
+                +comeiaHit()
+                .seta
+                    p.down Arte em Lorem
+                    +image('setaComeia.svg', "setaComeia in")
+            .hit.comeiaItem4(item=4 , page="13_c1_m4" )
+                +comeiaHit()
+                .seta
+                    p.down MUNDO IPSUM
+                    +image('setaComeia.svg', "setaComeia in")
+            .hit.comeiaItem5(item=5, page="16_c1_m5" )
+                +comeiaHit()
+                .seta
+                    +image('setaComeia.svg', "setaComeia in")
+                    p.right MUNDO LOREM
+                    
+            .hit.comeiaItem6(item=6, page="19_c1_m6" )
+                +comeiaHit()
+                .seta
+                    +image('setaComeia.svg', "setaComeia in")
+                    p.up Review
+
+
+block scripts
+    script(src="script.js")

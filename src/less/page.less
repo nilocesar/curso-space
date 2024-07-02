@@ -1,0 +1,228 @@
+@import 'includes/imports.less';
+
+/* less components */
+@import 'includes/component/component.modal.less';
+@import 'includes/component/component.button.less';
+@import 'includes/component/component.header.less';
+@import 'includes/component/component.help.less';
+
+/* less template */
+@import 'includes/spacers.less';
+@import 'includes/colors.less';
+@import 'includes/defaults.less';
+
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+
+:root {
+	--card-height: 65vh;
+	--card-width: calc(var(--card-height) / 1.5);
+}
+
+html,
+body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+	--a: "0deg";
+	--xAngle: "0deg";
+	--yAngle: "0deg";
+
+	perspective: 30cm;
+
+	&:hover .seta,
+  &:hover .comeiaAll,
+	&:hover .btnInt,
+	&:hover .cityContainer,
+	&:hover .triangulo{
+			transition-duration: 0s;
+	}
+
+	.mr-full{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		width: 90%;
+		height: 90%;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.56);
+		overflow: hidden;
+		border-radius: 1em;
+
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+		.bg{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-repeat: no-repeat;
+				background-size: cover;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+
+.containerAnima1 {
+	&::before {
+			position: absolute;
+			content: "";
+			width: 104%;
+			height: 102%;
+			border-radius: 8px;
+			background-image: linear-gradient(
+				var(--rotate)
+				, #5ddcff, #3c67e3 43%, #4e00c2);
+			z-index: -1;
+			top: -1%;
+			left: -2%;
+			animation: spin 2.5s linear infinite;
+			opacity: 0.2;
+	}
+		
+	&::after {
+			position: absolute;
+			content: "";
+			top: calc(var(--card-height) / 6);
+			left: 0;
+			right: 0;
+			z-index: -1;
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+			transform: scale(0.8);
+			filter: blur(calc(var(--card-height) / 6));
+			background-image: linear-gradient(
+				var(--rotate)
+				, #5ddcff, #3c67e3 43%, #4e00c2);
+			opacity: 0.1;
+			transition: opacity .5s;
+			animation: spin 2.5s linear infinite;
+	}
+}
+
+.containerAnima2 {
+	&::before {
+		position: absolute;
+		content: "";
+		width: 104%;
+		height: 102%;
+		border-radius: 8px;
+		background-image: linear-gradient(
+				var(--rotate)
+			, #5ddcff, #3c67e3 43%, #4e00c2);
+		z-index: -1;
+		top: -1%;
+		left: -2%;
+		// animation: spin 2.5s linear infinite;
+		opacity: 0.2;
+	}
+		
+	&::after {
+			position: absolute;
+			content: "";
+			top: calc(var(--card-height) / 6);
+			left: 0;
+			right: 0;
+			z-index: -1;
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+			transform: scale(0.8);
+			filter: blur(calc(var(--card-height) / 6));
+			background-image: linear-gradient(
+					var(--rotate)
+					, #5ddcff, #3c67e3 43%, #4e00c2);
+			opacity: 0.1;
+			transition: opacity .5s;
+			// animation: spin 2.5s linear infinite;
+	}
+}
+
+@keyframes spin {
+	0% {
+			--rotate: 0deg;
+	}
+	100% {
+			--rotate: 360deg;
+	}
+}
+
+
+#particles-js{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	canvas {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			// z-index: -10;
+			top: 0;
+			left: 0;
+	}
+}
+
+/* BLINK FAST */
+.highFreq { 
+	animation: blinkFast 0.0009s infinite alternate;
+}
+
+@keyframes blinkFast {70%{opacity: 0.7;}}
+
+.flicker {
+	color: rgba(255, 255, 255,0);
+	text-shadow: 2px 2px 1px #fff, 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #fff;
+	animation: flickerer 3s infinite alternate;
+}
+
+@keyframes flickerer {
+	40%{opacity:0.8;}
+	42%{opacity:0.1;}
+	43%{opacity:0.8;}
+	45%{opacity:0.1;}
+	46%{opacity:0.8;}
+}
+
+.highFreqStatic{
+	position: absolute;
+	width: 200%;
+	left: 50%;
+	top: 25%;
+	margin-left: -100%;
+	font-weight: 1000;//xbold
+	font-size: 3.5em;
+	line-height: 1;
+	text-align: center;
+	color: rgba(255, 255, 255,0);
+	text-shadow: -1px -1px 1px #fff, 2px 2px 1px #fff;
+	
+}  
+
+
+.embed-container-frame{
+	iframe{
+		height: 100% !important;
+	}
+}

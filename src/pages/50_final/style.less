@@ -1,0 +1,202 @@
+@import '../../less/includes/colors.less';
+
+
+.container {
+
+    .bg{
+        background-image: url(../../assets/img/bg01.png);
+        opacity: 0.25;
+    }
+
+    .content{
+        position: relative;
+        width:100%;
+        top: -1em;
+
+        .triangulo{
+            position: relative;
+            width: 15em;
+            height: 15em;
+            top: -9em;
+            cursor: pointer;
+            transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,6cm);
+            transform-style: preserve-3d;
+            z-index: 2;
+            margin: 0 auto;
+    
+            .trianguloBase{
+                position: relative;
+                width:100%;
+                height: 100%;
+            }
+    
+            .triangImg{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/triangulo4.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+    
+            .titleContainer{
+                position: absolute;
+                width: 17em;
+                height: 17em;
+                left: 50%;
+                top: -20%;
+                margin-left: -8.5em;
+    
+                .title{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(../../assets/img/titulo1.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+        }
+    
+        .block{
+            position: absolute;
+            width: 65%;
+            height: 13.5em;
+            top: 45%;
+            left: 66%;
+            margin-top: -7.5em;
+            margin-left: -50%;
+            border-radius: 1em;
+            background: transparent;
+            background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
+            z-index: 1;
+            overflow: hidden;
+    
+            .text{
+                position: absolute;
+                width: 36.2em;
+                height: 14em;
+                left: 2.5em;
+                top: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
+        
+                .title{
+                    font-size: 2em;
+                    font-weight: bold;
+                    color: #2BFED8;
+                }
+                p{
+                    color: #fff;
+                    font-size: 1em;
+                    font-weight: 300;
+                    margin-block-start: 0.5em;
+                    margin-block-end: 0;
+    
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .btnX{
+        position: relative;
+        width:100%;
+        transform: scale(0.26);
+        top: -2em;
+        left: -12em;
+        transition: all 0.3s ease-out;
+
+        &:hover{
+            transform: scale(0.27);
+            top: -2.3em;
+        }
+
+        &.btn2{
+            left: 10em;
+        }
+
+        cursor: pointer;
+        .torre{
+            position: absolute;
+            width: 30em;
+            height: 40em;
+            left: 0;
+            top: 0;
+            z-index: 4;
+    
+            .torreImg{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/torre1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    
+        .block{
+            position: absolute;
+            width: 50em;
+            height: 18em;
+            top: 5em;
+            left: 10em;
+            border-radius: 1em;
+            background: transparent;
+            background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
+            z-index: 3;
+        }
+    
+        .triangulo{
+            position: absolute;
+            width: 25em;
+            height: 25em;
+            left:0;
+           
+            .triangImg{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/triangulo3.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    
+        .text{
+            position: absolute;
+            z-index: 9;
+            text-align: right;
+            width: 45em;
+            height: 14em;
+            left: 12rem;
+            top: 7em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+    
+            .title{
+                font-size: 4.4em;
+                font-weight: bold;
+                color: #2BFED8;
+
+                &.amarelo{
+                    color: #FFA700;
+                }
+            }
+        }
+    }
+}

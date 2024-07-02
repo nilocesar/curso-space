@@ -1,0 +1,252 @@
+@import '../../less/includes/colors.less';
+
+
+.container {
+
+    .bg{
+        background-image: url(../../assets/img/bg04.png);
+        opacity: 0.5;
+    }
+
+    .titulo{
+        position: absolute;
+        font-size: 0.8em;
+        font-weight:bold;
+        color: #2BFED8;
+        left: 1em;
+        bottom: 1em;
+    }
+
+    .comeiaAll{
+        position: relative;
+        transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,3cm);
+        transform-style: preserve-3d;
+        z-index: 12;
+        width: 25em;
+        height:25em;
+        
+        .comeiaCenter{
+            position: absolute;
+            width:10em;
+            height: 10em;
+            object-fit: contain;
+            top: 7.5em;
+            left: 7.5em;
+            pointer-events: none;
+        }
+        
+        .comeiaItem{
+            position: absolute;
+            width:9.2em;
+            height: 9.2em;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        .comeiaItem4{
+            top: 0.7em;
+            left: 12.2em;
+            z-index: 4;
+        }
+
+        .comeiaItem5{
+            top: 7.9em;
+            left: 16.4em;
+            z-index: 3;
+        }
+
+        .comeiaItem6{
+            top: 15.15em;
+            left: 12.1em;
+            z-index: 2;
+        }
+
+        .comeiaItem1{
+            top: 15.15em;
+            left: 3.7em;
+        }
+
+        .comeiaItem2{
+            top: 7.8em;
+            left: -0.5em;
+        }
+
+        .comeiaItem3{
+            top: 0.6em;
+            left: 3.7em;
+        }
+
+        .hit{
+            position: absolute;
+            width:9.2em;
+            height: 9.2em;
+            z-index: 18;
+
+            &.comeiaItem1{
+                .seta{
+                    top: auto !important;
+                    bottom: -2em !important;
+
+                    img{
+                        transform: rotate(0deg);
+                    }
+                    p{
+                        margin-block-start: 0.2em !important;
+                        margin-block-end: 0;
+                    }
+                }
+            } 
+
+            &.comeiaItem2{
+                
+                .seta{
+                    flex-direction:row !important;
+                    top: 34% !important;
+                    left: -2.5em !important;
+
+                    img{
+                        transform: rotate(-270deg);
+                    }
+                    p{
+                        margin-block-start: 0;
+                        margin-block-end: 0;
+                    }
+                }
+            }
+           
+            &.comeiaItem4{
+                z-index: 4;
+            }
+    
+            &.comeiaItem5{
+                z-index: 3;
+
+                .seta{
+                    flex-direction:row !important;
+                    top: 34% !important;
+                    left: 9.7em !important;
+
+                    img{
+                        transform: rotate(270deg);
+                    }
+                    p{
+                        margin-block-start: 0;
+                        margin-block-end: 0;
+                    }
+                }
+            }
+    
+            &.comeiaItem6{
+                z-index: 2;
+                .seta{
+                    top: auto !important;
+                    bottom: -2em !important;
+
+                    img{
+                        transform: rotate(0deg);
+                        filter: invert(72%) sepia(22%) saturate(2168%) hue-rotate(340deg) brightness(103%) contrast(101%);
+                    }
+                    p{
+                        margin-block-start: 0.2em !important;
+                        margin-block-end: 0;
+                    }
+                }
+            }
+
+            
+
+            svg{
+                position: relative;
+                width:100%;
+                height: 100%;
+                z-index: 30;
+
+                path{
+                    position: relative;
+                    width:100%;
+                    height: 100%;
+                    z-index: 30;
+
+                    fill:rgba(193, 28, 249,0.7);
+                    cursor: pointer;
+
+                    &:hover{
+                        fill:rgba(152, 4, 201, 0.7);
+                    }
+                }
+            }
+
+            .seta{
+                position: absolute;
+                pointer-events: none;
+                top: -3em;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 85%;
+                left: 50%;
+                margin-left: -42.5%;
+                transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,3cm);
+                transform-style: preserve-3d;
+                display: none;
+                z-index: 40;
+
+                @media (max-width:960px){
+                    display: flex;
+                }
+
+                img{
+                    filter: invert(62%) sepia(39%) saturate(6357%) hue-rotate(148deg) brightness(99%) contrast(80%);
+                    transform: scaleY(-1);
+                    width: 3em;
+                    height: 3em;
+                }
+
+                p{
+                    font-weight: bold;
+                    color:#fff;
+                    text-align: center;
+                    margin-block-end: 0.2em;
+                    text-transform: uppercase;
+                }
+            }
+            
+        }
+
+        .visitado{
+            path{
+                fill: rgba(0, 0, 0, 0) !important;
+            }
+        }
+        
+        .atual{
+            transform: scale(1);
+	        animation: pulse 2s infinite;
+        }
+
+        .inativo{
+            // filter: blur(2.5px);
+            filter: grayscale(100%);
+            opacity: 0.2;
+
+            path{
+                pointer-events: none;
+                fill: rgba(0, 0, 0, 0.5) !important;
+            }
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+    
+        70% {
+            transform: scale(1);
+        }
+    
+        100% {
+            transform: scale(0.95);
+        }
+    } 
+}

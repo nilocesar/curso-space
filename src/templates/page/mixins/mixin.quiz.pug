@@ -1,0 +1,29 @@
+mixin quiz(template)
+    .quiz(id=template.id)
+        p.enunciado!=template.enunciado
+        .alternativas
+            each alternative in template.alternatives
+                .alternativa(class=alternative.class, data-indicadores=`{"score": ${alternative.score}}`)
+                    p!=alternative.text
+
+            .confirmar
+                +button({
+                    text: 'Responder',
+                    icon: 'icon01.png'
+                })
+
+        each feedback in template.feedbacks
+            .feedback.hide(class=feedback.class)
+                .flex
+                    .container-feed.zoomIn
+                        .icon
+                            if feedback.class == 'feedback-positivo'
+                                +image('ico-positivo.svg')
+                            else
+                                +image('ico-negativo.svg')
+                        .texts
+                            p.title!=feedback.title
+                            p!=feedback.text
+                        
+                        .feed-close
+                            +button({text: 'Avançar', icon: 'icon01.png'})

@@ -1,0 +1,26 @@
+.container-button {
+    background-color: @color-lilas;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    padding: 0em 0.6em;
+    border-radius: 0.3em;
+    transition: transform .5s;
+    cursor: pointer;
+    p {
+        color: @color-white;
+        margin: 0;
+        margin-left: 0.6em;
+    }
+    .icone {
+        margin-left: 1.1em;
+        img {
+            width: 2em;
+        }
+    }
+    &:hover {
+        transition: transform .5s;
+        transform: scale(1.1);
+    }
+}

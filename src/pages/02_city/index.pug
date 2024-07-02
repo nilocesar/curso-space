@@ -1,0 +1,26 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container.containerAnima1
+        .bg
+        #particles-js
+        .triangulo.zoomIn.delay1
+            .triangImg.flicker
+            .block.highFreq.safari_only
+            .cityContainer.zoomIn.delay2
+                video.safari_only(src="../../assets/videos/video2.webm", preload="auto", autoplay, loop, muted )
+                +image('city2.png',"city safari_only")
+            .btnInt(onclick="navigate.next()")
+                .icoB.down.delay3
+                    .icoC.pulse
+                .conT.left
+                    p Entrar
+                    .line
+                   
+                
+
+block scripts
+    script(src="script.js")

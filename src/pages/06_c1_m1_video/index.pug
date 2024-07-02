@@ -1,0 +1,17 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container
+        .embed-container.embed-container-frame
+
+            <iframe src="https://www.youtube.com/embed/CmzKQ3PSrow?rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            //- iframe(src='https://player.vimeo.com/video/704149365?h=7b71a24ea8', frameborder='0', allowFullScreen)
+        .close-page(page="04_c1", materialComplete=1)
+            +image('closeBtn.svg')
+
+block scripts
+    //- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/froogaloop.js"></script>
+    script(src="script.js")

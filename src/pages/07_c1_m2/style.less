@@ -1,0 +1,208 @@
+@import '../../less/includes/colors.less';
+
+header{
+    .btnM{
+        display:block !important;
+    }
+}
+
+.container {
+
+    .bg{
+        background-image: url(../../assets/img/bg04.png);
+        opacity: 0.3;
+    }
+
+    .triangulo{
+        position: relative;
+        width: 25em;
+        height: 25em;
+        margin-top: 3em;
+        
+        .cityContainer{
+            
+            position: absolute;
+            width: 60em;
+            height: 37em;
+            left: -65.5%;
+            top: -8em;
+            z-index: 13;
+
+            transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,3cm);
+            transform-style: preserve-3d;
+            
+            video{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                
+                _::-webkit-full-page-media, _:future, :root &.safari_only {
+                    display:none;
+                }
+            }
+
+            .city{
+                position: absolute;
+                width: 70%;
+                height: 70%;
+                left:9em;
+                top: 7em;
+                z-index: 8;
+                object-fit: contain;
+                display:none;
+
+                _::-webkit-full-page-media, _:future, :root &.safari_only {
+                    display:block;
+                }
+            }
+        }
+
+        .hit{
+            position:absolute;
+            width: 5.8em;
+            height: 5.8em;
+            z-index: 20;
+            cursor: pointer;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+
+            transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,4cm);
+            transform-style: preserve-3d;
+
+            &.visitado{
+                
+                // filter: grayscale(70%);
+                // opacity: 0.9;
+
+                .borderM{
+                    filter: invert(100%) sepia(56%) saturate(1698%) hue-rotate(95deg) brightness(96%) contrast(105%);
+                }
+
+                .text{
+                    border: 0.1em solid #66FEE8;
+                }
+            }
+            
+            &.atual{
+                .hitImg,.borderM{
+                    transform: scale(1);
+                    animation: pulse 1s infinite;
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(0.95);
+                        }
+                    
+                        70% {
+                            transform: scale(1);
+                        }
+                    
+                        100% {
+                            transform: scale(0.95);
+                        }
+                    }
+                }
+
+                .borderM{
+                    filter: invert(49%) sepia(98%) saturate(830%) hue-rotate(263deg) brightness(102%) contrast(99%);
+                }
+
+                .text{
+                    border: 0.1em solid #EC66FE;
+                }
+            }
+    
+            &.inativo{
+                filter: grayscale(100%);
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+            &.hit1{
+                top: -2.5em;
+                left: 6em;
+            }
+
+            &.hit2{
+                top: 2.2em;
+                left: 19.5em;
+            }
+
+            &.hit3{
+                top: 8.5em;
+                left: 10.5em;
+            }
+
+            &.hit4{
+                top: 5.5em;
+                left: -0.6em;
+            }
+
+            &.hit5{
+                top: 15.5em;
+                left: 3.6em;
+            }
+
+            &.hit6{
+                top: 11.5em;
+                left: 20.6em;
+            }
+
+            &:hover{
+                .text{
+                    display:block;
+                }
+            }
+
+            .hitBase{
+                position:absolute;
+                width:100%;
+                height: 100%;
+            }
+
+
+            .hitImg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                filter: drop-shadow( 0.8em 0.8em 1.6em rgba(0,0,0,0.8));
+            }
+
+            .borderM{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .text{
+                position: absolute;
+                width: auto;
+                border: 0.1em solid #000;
+                border-radius: 2em;
+                padding: 0.2em;
+                top: -1.8em;
+                display:none;
+
+                .textInt{
+                    position: relative;
+                    width:max-content;
+                    padding: 0.2em 1em;
+                    background-color: #fff;
+                    border-radius: 2em;
+                    font-size: 0.6em;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-align: center;
+                    color: #30313c;
+                }
+            }
+        } 
+    }
+}

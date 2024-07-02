@@ -1,0 +1,74 @@
+@import '../../less/includes/colors.less';
+
+
+.container {
+
+    .bg{
+        background-image: url(../../assets/img/bg01.png);
+        opacity: 0.25;
+    }
+
+    .triangulo{
+        position: relative;
+        width: 25em;
+        height: 25em;
+        cursor: pointer;
+        transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0,0,6cm);
+        transform-style: preserve-3d;
+
+        .trianguloBase{
+            position: relative;
+            width:100%;
+            height: 100%;
+        }
+
+        .triangImg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../assets/img/triangulo1.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .titleContainer{
+            position: absolute;
+            width: 30em;
+            height: 20em;
+            left: 50%;
+            top: 0%;
+            margin-left: -15em;
+
+            .title{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/titulo1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+
+        .iniciar{
+            position: absolute;
+            width: 7em;
+            height: 7em;
+            left: 50%;
+            bottom: 4em;
+            margin-left: -3.5em;
+            
+            div{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-image: url(../../assets/img/iniciar.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,25 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container.containerAnima2
+        .bg
+        #particles-js
+        .triangulo.right
+            .triangImg.highFreq
+        .block.left.delay1
+        .torre.up
+            .torreImg.flicker
+        .next.left.delay3
+            .nextIco
+        .text
+            .title.left.delay4 Conhecendo<br> o Mundo Lorem Ipsum
+            p.left.delay5 Neste primeiro módulo você conhecerá um pouco <br>da história e mundo Lorem Ipsum.
+        .btn.zoomIn.delay7(onclick="navigate.next()")
+            .img
+                
+
+block scripts
+    script(src="script.js")

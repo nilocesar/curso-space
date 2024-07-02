@@ -1,0 +1,108 @@
+include mixins/index.pug
+
+doctype html
+html.full-iframe.mr-fontsize
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="../../template/page.css")
+		block styles
+	body
+		block body-before
+		.mr-full.inOpen
+			block body
+			header
+				.btns
+					.icon.btnH(data-modal="#help")
+						+image('icoHelp.svg')
+					.icon.btnM
+						+image('icoMenu.svg')
+				
+				.subLogo
+						+image('blockchain.svg')
+					
+					
+
+			#help
+				.containerHelp
+					.triangulH.zoomIn.delay1
+					.blocksH
+						.blockH.blockH1
+							.fundH
+							.conteudH
+								.titleH Instruções
+								.listH
+									.itH
+										+image('ico1H.png')
+										.textH Entre em nossa ambiente e comece sua aventura por nosso metaverso. Clique no símbolo para começar.
+									.itH
+										+image('ico2H.png')
+										.textH Nosso primeiro módulo vai te guiar para nossa rede de blocos onde o conhecimento te aguarda. Clique no <b>Vamos lá</b>.
+									.itH
+										+image('ico3H.png')
+										.textH Nossa colmeia de desafios te mostrará qual a jornada que te espera.
+						.blockH.blockH2
+							.fundH
+							.conteudH
+								.titleH Status botões
+								.listH1
+									.itH
+										.textH A fazer
+										+image('comeiaItem1.svg', 'itemH1' )
+									.itH
+										.textH Próximo liberado
+										.comeiaItem2
+											+image('comeiaItem1.svg', 'itemH2' )
+											+comeiaHit()
+									.itH
+										.textH concluído
+										+image('comeiaItem1.svg' , 'itemH3')
+								.listH2
+									.itH
+										.textH A fazer
+										.material.itemH1
+											+image('ico1Material.png',"hitImg")
+											+image('borderMaterial.svg',"borderM")
+									.itH
+										.textH Próximo liberado
+										.material.itemH2
+											+image('ico1Material.png',"hitImg")
+											+image('borderMaterial.svg',"borderM")
+									.itH
+										.textH concluído
+										.material.itemH3
+											+image('ico1Material.png',"hitImg")
+											+image('borderMaterial.svg',"borderM")
+								.listH2
+									.itH
+										.textH PDF
+										.material.itemH3
+											+image('ico2Material.png',"hitImg")
+											+image('borderMaterial.svg',"borderM")
+									.itH
+										.textH Video
+										.material.itemH3
+											+image('ico1Material.png',"hitImg")
+											+image('borderMaterial.svg',"borderM")
+
+					.modal-close
+						+image('closeBtn.svg')
+
+			
+		block body-after
+
+	+scriptVendor('eventEmitter.js')
+	+scriptVendor('jquery.min.js')
+	+scriptVendor('particles.min.js')
+	
+	+scriptModule('component.base-page.js')
+	+scriptModule('behavior.adaptative.js')
+	+scriptModule('component.modal.js')
+	
+	+scriptScripts('animations.js')
+	+scriptScripts('pages.js')
+	+scriptScripts('resize.js')
+	block scripts
+		
+	

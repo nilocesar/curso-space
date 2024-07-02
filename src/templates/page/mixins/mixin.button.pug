@@ -1,0 +1,11 @@
+mixin button(template)
+    if template.navigate
+        .container-button(onclick="navigate.goto('"+template.navigate+"')")
+            p!=template.text
+            .icone
+                +image(template.icon)
+    else
+        .container-button
+            p!=template.text
+            .icone
+                +image(template.icon)           

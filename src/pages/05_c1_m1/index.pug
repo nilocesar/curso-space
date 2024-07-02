@@ -1,0 +1,56 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container.containerAnima1
+        .bg
+        #particles-js
+        .triangulo.zoomIn.delay1
+            .cityContainer.zoomIn.delay2
+                video.safari_only(src="../../assets/videos/material.webm", preload="auto", autoplay, loop, muted )
+                +image('material.svg',"city safari_only")
+            .materia( comeia=1, material=1 )
+                //- .hit.hit1(item=1 , page="05_material" )
+                //-     .hitBase.zoomIn.delay3
+                //-         +image('ico1Material.png',"hitImg")
+                //-         +image('borderMaterial.svg',"borderM")
+                //-     .text.down
+                //-         .textInt Minimizando a Volatilidade
+                //- .hit.hit2(item=2 , page="05_material" )
+                //-     .hitBase.zoomIn.delay4
+                //-         +image('ico2Material.png',"hitImg")
+                //-         +image('borderMaterial.svg',"borderM")
+                //-     .text.down
+                //-         .textInt Minimizando a Volatilidade
+                .hit.hit3.item1(item=1 , page="06_c1_m1_video" )
+                    .hitBase.zoomIn.delay3
+                        +image('ico1Material.png',"hitImg")
+                        +image('borderMaterial.svg',"borderM")
+                    .text.down
+                        .textInt Evolução e Revolução Lorem
+                //- .hit.hit4(item=4 , page="05_material" )
+                //-     .hitBase.zoomIn.delay6
+                //-         +image('ico2Material.png',"hitImg")
+                //-         +image('borderMaterial.svg',"borderM")
+                //-     .text.down
+                //-         .textInt Minimizando a Volatilidade
+                //- .hit.hit5(item=5 , page="05_material" )
+                //-     .hitBase.zoomIn.delay7
+                //-         +image('ico1Material.png',"hitImg")
+                //-         +image('borderMaterial.svg',"borderM")
+                //-     .text.down
+                //-         .textInt Minimizando a Volatilidade
+                //- .hit.hit6(item=6 , page="05_material" )
+                //-     .hitBase.zoomIn.delay8
+                //-         +image('ico2Material.png',"hitImg")
+                //-         +image('borderMaterial.svg',"borderM")
+                //-     .text.down
+                //-         .textInt Minimizando a Volatilidade
+                
+                   
+                
+
+block scripts
+    script(src="script.js")
