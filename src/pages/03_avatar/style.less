@@ -155,17 +155,24 @@
     align-items: center;
 
     .avatarContainer {
-        position: relative;
-        width: 8em;
+        position: absolute;
+        width: 43em;
         height: 22em;
         background: #3f4b64;
         top: -0.5em;
-        border: 0.3rem double #003;
+        left: 0;
+        /* border: 0.3rem double #003; */
         mix-blend-mode: hard-light;
         box-shadow: 10px 10px 67px 0px rgba(0, 0, 0, 0.75);
         border-radius: 0.5em;
         transform: rotateX(var(--xAngle)) rotateY(var(--yAngle)) translate3d(0, 0, 3cm);
         transform-style: preserve-3d;
+        z-index: -1;
+        background-image: url(../../assets/img/bg05.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
     }
 
     .title {
