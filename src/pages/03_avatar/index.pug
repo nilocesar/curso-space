@@ -1,0 +1,117 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+    link(rel="stylesheet", href="style.css")
+
+block body
+    .container.containerAnima1
+        .bg
+        #particles-js
+        .triangulo.zoomIn.delay1
+            //- .triangImg.flicker
+            //- .block.highFreq.safari_only
+            //- .cityContainer.zoomIn.delay2
+            //-     video.safari_only(src="../../assets/videos/video2.webm", preload="auto", autoplay, loop, muted )
+            //-     +image('city2.png',"city safari_only")
+            //- .btnInt(onclick="navigate.next()")
+            //-     .icoB.down.delay3
+            //-         .icoC.pulse
+            //-     .conT.left
+            //-         p Entrar
+            //-         .line
+        .containerScreen
+            .title
+                h1(tabindex=acessib_count++) CRIANDO SEU <b>AVATAR</b>
+            .controle
+                .menuX.menuX1
+                    .listMenu
+                        p( tabindex=acessib_count++, aria-label="A seguir temos 8 estilos de cabelo, escolha um deles e pressione o Enter para confirmar a sua escolha." ) CABELO
+                        .listB
+                            button.cabelo.cabelo1( type="cabelo", model=1, tabindex=acessib_count++, aria-label='Estilo 1: cabelo curto, rente à cabeça.' )
+                                +image('avatar/cabelo1.png', '', 'Estilo 1: cabelo curto, rente à cabeça.')
+                            button.cabelo.cabelo2( type="cabelo", model=2, tabindex=acessib_count++, aria-label='Estilo 2: cabelo curto, um pouco maior e crespo.' )
+                                +image('avatar/cabelo2.png', '', 'Estilo 2: cabelo curto, um pouco maior e crespo.')
+                            button.cabelo.cabelo3( type="cabelo", model=3, tabindex=acessib_count++, aria-label='Estilo 3: cabelo curto e liso.' )
+                                +image('avatar/cabelo3.png', '', 'Estilo 3: cabelo curto e liso.')
+                            button.cabelo.cabelo4( type="cabelo", model=4, tabindex=acessib_count++, aria-label='Estilo 4: cabelo curto, liso e com topete.' )
+                                +image('avatar/cabelo4.png', '', 'Estilo 4: cabelo curto, liso e com topete.')
+                            button.cabelo.cabelo5( type="cabelo", model=5, tabindex=acessib_count++, aria-label='Estilo 5: cabelo cabelo liso na altura dos ombros e volumoso em cima.' )
+                                +image('avatar/cabelo5.png', '', 'Estilo 5: cabelo cabelo liso na altura dos ombros e volumoso em cima.')
+                            button.cabelo.cabelo6( type="cabelo", model=6, tabindex=acessib_count++, aria-label='Estilo 6: cabelo liso, comprido e repartido na lateral da testa.' )
+                                +image('avatar/cabelo6.png', '', 'Estilo 6: cabelo liso, comprido e repartido na lateral da testa.')
+                            button.cabelo.cabelo7( type="cabelo", model=7, tabindex=acessib_count++, aria-label='Estilo 7: cabelo liso, comprido e com franja.' )
+                                +image('avatar/cabelo7.png', '', 'Estilo 7: cabelo liso, comprido e com franja.')
+                            button.cabelo.cabelo8( type="cabelo", model=8, tabindex=acessib_count++, aria-label='Estilo 8: cabelo crespo na altura dos ombros.' )
+                                +image('avatar/cabelo8.png', '', 'Estilo 8: cabelo crespo na altura dos ombros.') 
+                    .listMenu
+                        p( tabindex=acessib_count++, aria-label="A seguir temos 5 opções de cor do cabelo, escolha uma das opções e pressione o Enter para confirmar a sua escolha." ) COR DO CABELO
+                        .listB
+                            button.corCabelo.cor1( type="corCabelo", model=1, tabindex=acessib_count++, aria-label='Cor 1: preto.' )
+                            button.corCabelo.cor2( type="corCabelo", model=2, tabindex=acessib_count++, aria-label='Cor 2: castanho escuro.' )
+                            button.corCabelo.cor3( type="corCabelo", model=3, tabindex=acessib_count++, aria-label='Cor 3: castanho claro.' )
+                            button.corCabelo.cor4( type="corCabelo", model=4, tabindex=acessib_count++, aria-label='Cor 4: loiro.' )
+                            button.corCabelo.cor5( type="corCabelo", model=5, tabindex=acessib_count++, aria-label='Cor 5: verde.' )
+                    .listMenu
+                        p( tabindex=acessib_count++, aria-label="A seguir temos 5 opções de cor da pele, escolha uma das opções e pressione o Enter para confirmar a sua escolha." ) COR DA PELE
+                        .listB
+                            button.corPele.cor1( type="corPele", model=1, tabindex=acessib_count++, aria-label='Cor 1: branca.' )
+                            button.corPele.cor2( type="corPele", model=2, tabindex=acessib_count++, aria-label='Cor 2: morena clara.' )
+                            button.corPele.cor3( type="corPele", model=3, tabindex=acessib_count++, aria-label='Cor 3: média.' )
+                            button.corPele.cor4( type="corPele", model=4, tabindex=acessib_count++, aria-label='Cor 4: morena escura.' )
+                            button.corPele.cor5( type="corPele", model=5, tabindex=acessib_count++, aria-label='Cor 5: negra.' )
+
+                +avatar()
+                    
+
+                .menuX.menuX2
+                    .listMenu
+                        p( tabindex=acessib_count++, aria-label="A seguir temos 9 opções de acessórios, escolha quantos desejar (apenas o chapeú e óculos que é possível apenas a seleção de 1 deles), após a seleção pressione o Enter para confirmar a sua escolha." ) ACESSÓRIOS
+                        .listB
+                            button.acessorio.chapeu.chapeu1( type="chapeu", model=1, tabindex=acessib_count++, aria-label="Acessório 1: Chapéu azul" )
+                                +image('avatar/bone1.png', 'chapeu chapeu1', 'Acessório 1: Chapéu azul.')
+                            button.acessorio.chapeu.chapeu2( type="chapeu", model=2, tabindex=acessib_count++, aria-label="Acessório 2: capacete de segurança amarelo e laranja." )
+                                +image('avatar/bone2.png', 'chapeu chapeu2', 'Acessório 2: capacete de segurança amarelo e laranja.')
+                            button.acessorio.chapeu.chapeu3( type="chapeu", model=3, tabindex=acessib_count++, aria-label="Acessório 3: boné verde." )
+                                +image('avatar/bone3.png', 'chapeu chapeu3', 'Acessório 3: boné verde.')
+                            
+                            button.acessorio.oculos.oculos1( type="oculos", model=2, tabindex=acessib_count++, aria-label="Acessório 4: óculos de grau de armação quadrada preta." )
+                                +image('avatar/oculos1.png', 'oculos oculos1', 'Acessório 4: óculos de grau de armação quadrada preta.')
+                            button.acessorio.oculos.oculos2( type="oculos", model=1, tabindex=acessib_count++, aria-label="Acessório 5: óculos de proteção." )
+                                +image('avatar/oculos2.png', 'oculos oculos2', 'Acessório 5: óculos de proteção.')
+                            button.acessorio.oculos.oculos3( type="oculos", model=3, tabindex=acessib_count++, aria-label="Acessório 6: óculos escuro." )
+                                +image('avatar/oculos3.png', 'oculos oculos3', 'Acessório 6: óculos escuro.')
+                            
+                            button.acessorio.relogio( type="relogio", model=1, tabindex=acessib_count++, aria-label="Acessório 7: relógio do tipo smartwatch." )
+                                +image('avatar/relogio.svg', 'relogio', 'Acessório 7: relógio do tipo smartwatch.')
+                            button.acessorio.fone( type="fone", model=1, tabindex=acessib_count++, aria-label="Acessório 8: aparelho auditivo." )
+                                +image('avatar/fone.svg', 'fone', 'Acessório 8: aparelho auditivo.')
+                            button.acessorio.bengala( type="bengala", model=1, tabindex=acessib_count++, aria-label="Acessório 9: Bengala preta com ponta verde para pessoa com deficiência visual." )
+                                +image('avatar/punhal.svg', 'bengala', 'Acessório 9: Bengala preta com ponta verde para pessoa com deficiência visual.')
+
+                    .listMenu
+                        p( tabindex=acessib_count++, aria-label="A seguir temos 3 opções de roupas e 3 opções de calçados, escolha um de cada e após a seleção pressione o Enter para confirmar a sua escolha." ) ROUPAS E CALÇADOS
+                        .listB
+                            button.acessorio2.roupa.roupa1( type="roupa", model=1, tabindex=acessib_count++, aria-label="Roupa 1: colete salva-vidas, jaqueta amarela e luvas vermelhas." )
+                                +image('avatar/roupa1.svg', 'roupa roupa1', 'Roupa 1: colete salva-vidas, jaqueta amarela e luvas vermelhas.')
+                            button.acessorio2.roupa.roupa2( type="roupa", model=2, tabindex=acessib_count++, aria-label="Roupa 2: colete refletivo amarelo, protetor de ouvido e luvas azul escuro." )
+                                +image('avatar/roupa2.svg', 'roupa roupa2', 'Roupa 2: colete refletivo amarelo, protetor de ouvido e luvas azul escuro.')
+                            button.acessorio2.roupa.roupa3( type="roupa", model=3, tabindex=acessib_count++, aria-label="Roupa 3: jaleco branco com gravata azul lisa." )
+                                +image('avatar/roupa3.svg', 'roupa roupa3', 'Roupa 3: jaleco branco com gravata azul lisa.')
+                            
+                            button.acessorio2.sapato.sapato1( type="sapato", model=1, tabindex=acessib_count++, aria-label="Calçado 1: botas amarelas com detalhes em preto." )
+                                +image('avatar/sapato1.svg', 'sapato sapato1', 'Calçado 1: botas amarelas com detalhes em preto.')
+                            button.acessorio2.sapato.sapato2( type="sapato", model=2, tabindex=acessib_count++, aria-label="Calçado 2: bota de tecido marrom com cadarço preto." )
+                                +image('avatar/sapato2.svg', 'sapato sapato2', 'Calçado 2: bota de tecido marrom com cadarço preto.')
+                            button.acessorio2.sapato.sapato3( type="sapato", model=3, tabindex=acessib_count++, aria-label="Calçado 3: sapato social preto." )
+                                +image('avatar/sapato3.svg', 'sapato sapato3', 'Calçado 3: sapato social preto.')
+
+            .btns
+                button.botao.btnLimpar( tabindex=acessib_count++, aria-label="Pressione para limpar todas as suas seleções do avatar." )
+                    p Limpar
+                button.botao.btnConfirmar( tabindex=acessib_count++, aria-label="Pressione para confirmar as escolhas feitas no seu avatar e prosseguir para a próxima tela do jogo." )
+                    p Confirmar
+                   
+                
+
+block scripts
+    script(src="script.js")
