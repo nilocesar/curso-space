@@ -7,9 +7,9 @@ function controleAvatar() {
     $(".nome").text(scorm.loadObject("name"));
   }
 
-  $("header .avatar").on("click", function () {
-    scorm.saveObject("avatarReturn", navigate.currentScreenUid);
-    navigate.goto("05_tela");
+  $("header .resAvatar").on("click", function () {
+    scorm.saveObject("avatarReturn", scorm.get("cmi.core.lesson_location"));
+    navigate.goto("03_avatar");
   });
 
   resetAvatar();

@@ -13,6 +13,7 @@ html.full-iframe.mr-fontsize
 		.mr-full.inOpen
 			block body
 			header
+				+resAvatar({type:''})
 				.btns
 					.icon.btnH(data-modal="#help")
 						+image('icoHelp.svg')
@@ -62,29 +63,34 @@ html.full-iframe.mr-fontsize
 									.itH
 										.textH A fazer
 										.material.itemH1
-											+image('ico1Material.png',"hitImg")
-											+image('borderMaterial.svg',"borderM")
+											+resAvatar({type:''})
+											//- +image('ico1Material.png',"hitImg")
+											//- +image('borderMaterial.svg',"borderM")
 									.itH
 										.textH Próximo liberado
 										.material.itemH2
-											+image('ico1Material.png',"hitImg")
-											+image('borderMaterial.svg',"borderM")
+											+resAvatar({type:''})
+											//- +image('ico1Material.png',"hitImg")
+											//- +image('borderMaterial.svg',"borderM")
 									.itH
 										.textH concluído
 										.material.itemH3
-											+image('ico1Material.png',"hitImg")
-											+image('borderMaterial.svg',"borderM")
+											+resAvatar({type:''})
+											//- +image('ico1Material.png',"hitImg")
+											//- +image('borderMaterial.svg',"borderM")
 								.listH2
 									.itH
 										.textH PDF
-										.material.itemH3
-											+image('ico2Material.png',"hitImg")
-											+image('borderMaterial.svg',"borderM")
+										.material.itemH3.itemH3pdf
+											+resAvatar({type:'pdf'})
+											//- +image('ico2Material.png',"hitImg")
+											//- +image('borderMaterial.svg',"borderM")
 									.itH
 										.textH Video
-										.material.itemH3
-											+image('ico1Material.png',"hitImg")
-											+image('borderMaterial.svg',"borderM")
+										.material.itemH3.itemH3video
+											+resAvatar({type:'video'})
+											//- +image('ico1Material.png',"hitImg")
+											//- +image('borderMaterial.svg',"borderM")
 
 					.modal-close
 						+image('closeBtn.svg')

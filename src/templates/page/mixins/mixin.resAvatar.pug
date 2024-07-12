@@ -1,0 +1,8 @@
+mixin resAvatar(template)
+  .resAvatar(class=template.type)
+    .resContAvatar
+      +avatar()
+      if(template.type == "video")
+        +image('video-lecture.gif',"videoIco")
+      if(template.type == "pdf")
+        +image('pdf-video.gif',"pdfIco")
